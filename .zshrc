@@ -27,11 +27,13 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # aliases.
-alias zshconfig="code ~/.zshrc"
+#alias zshconfig="code ~/.zshrc"
 alias vim="nvim"
 
 # fzf setup.
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 export FZF_DEFAULT_OPTS="--height=70% --preview=\"cat {}\" --preview-window=right:60%:wrap"
 export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
