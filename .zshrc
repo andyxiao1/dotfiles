@@ -5,8 +5,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# TODO: do we need this?
+bindkey -v
+
 # If you come from bash you might have to change your $PATH.
+# TODO: do we need this?
+export PATH=$PATH:/Applications/CMake.app/Contents/bin
+# export PATH=/usr/bin:$PATH
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=/usr/bin:$PATH
 # export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -29,6 +36,11 @@ source $ZSH/oh-my-zsh.sh
 # aliases.
 alias zshconfig="code ~/.zshrc"
 alias vim="nvim"
+
+# CIS 5050 specific aliases.
+alias vm="cd ~/Developer/penn/cis5050/CIS5050A.vmwarevm && vmrun list"
+alias vmstart="cd ~/Developer/penn/cis5050/CIS5050A.vmwarevm && vmrun -T fusion start CIS5050A.vmx nogui"
+alias vmstop="cd ~/Developer/penn/cis5050/CIS5050A.vmwarevm && vmrun -T fusion stop CIS5050A.vmx"
 
 # fzf setup.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
