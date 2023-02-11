@@ -37,11 +37,6 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="code ~/.zshrc"
 alias vim="nvim"
 
-# CIS 5050 specific aliases.
-alias vm="cd ~/Developer/penn/cis5050/CIS5050A.vmwarevm && vmrun list"
-alias vmstart="cd ~/Developer/penn/cis5050/CIS5050A.vmwarevm && vmrun -T fusion start CIS5050A.vmx nogui"
-alias vmstop="cd ~/Developer/penn/cis5050/CIS5050A.vmwarevm && vmrun -T fusion stop CIS5050A.vmx"
-
 # fzf setup.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--height=70% --preview=\"cat {}\" --preview-window=right:60%:wrap"
