@@ -25,6 +25,14 @@
 # ================================== Settings ====================================
 # ================================================================================
 
+# =============================== General Things =================================
+# Full screen editor
+export VISUAL=nvim
+# Fallback / general editor
+export EDITOR="$VISUAL"
+# Set XDG_CONFIG_HOME so it can be used downstream
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
 # =============================== oh-my-zsh Stuff ================================
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -47,8 +55,9 @@ plugins=(
 # n.b. themes/plugins should be set BEFORE this step
 source $ZSH/oh-my-zsh.sh
 
+# Powerlevel10k config
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ -f "$XDG_CONFIG_HOME/zsh/p10k.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/p10k.zsh"
 
 # =============================== fzf Stuff ================================
 # - REMEMBER: [fzf] ctrl+r to search cmd history
@@ -62,7 +71,7 @@ source $ZSH/oh-my-zsh.sh
 # - LEARN: [fzf] multi-select mode
 
 # Sets up fzf keybindings, shell functions, auto-completion, etc
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ -f "$XDG_CONFIG_HOME/zsh/fzf.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/fzf.zsh"
 
 # I prefer --style=full better
 export FZF_DEFAULT_OPTS="--height=70% --preview=\"cat {}\" --preview-window=right:60%:wrap --style=full"
@@ -79,12 +88,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # TODO: [fzf] this ctrl + f thing isn't working; I think because of my bindkey -v later on
 bindkey '^F' fzf-file-widget
 
-# ================================= Misc Things ==================================
-# Full screen editor
-export VISUAL=nvim
-# Fallback / general editor
-export EDITOR="$VISUAL"
-
+# ============================== Post-Source Things ==============================
 # n.b. uv adds this
 # Safely adds $HOME/.local/bin to the $PATH
 . "$HOME/.local/bin/env"
