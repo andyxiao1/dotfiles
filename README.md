@@ -1,16 +1,17 @@
 I store all my dotfiles here.
 
 # Install / Sources
-INSTALL: https://formulae.brew.sh/formula/stow  
-source: https://tamerlan.dev/how-i-manage-my-dotfiles-using-gnu-stow/  
-source: https://www.youtube.com/watch?v=y6XCebnB9gs
+INSTALL: [stow] https://formulae.brew.sh/formula/stow  
+SOURCE: https://tamerlan.dev/how-i-manage-my-dotfiles-using-gnu-stow/  
+SOURCE: https://www.youtube.com/watch?v=y6XCebnB9gs
 
 # Philosopy
 - I try to catalog everything I need to install via whatever appropriate
-  package manager with `INSTALL: ` lines in my dotfiles
+  package manager with this `INSTALL: ` marker in my dotfiles
 - I try to be very intentional & explicit with my settings. I always forget
-  where/why I did something so I leave verbose comments & sources via `source: `
-  lines
+  where/why I did something so I leave verbose comments & sources via this
+  `SOURCE: ` marker
+- I have more markers listed below
 - I try to use the "XDG Base Directory Specification" stuff whenever I can
   because it feels cleaner. This just means put dotfiles in `~/.config`
 
@@ -28,18 +29,26 @@ cd ~/.dotfiles
 stow -nv .
 
 # run for real
-stow .
+stow -v .
 ```
 which symlinks the files in this repo to the parent directory (`~/`), ignoring
 things in `.stow-local-ignore`
 
-## See all the things to download
-TODO
+## Find markers
+```bash
+cd ~/.dotfiles
+rg -i --hidden 'INSTALL: '
+rg -i --hidden 'TODO: '
+rg -i --hidden 'SOURCE: '
+rg -i --hidden 'LEARN: '
+# helpful tipes to remember
+rg -i --hidden 'REMEMBER: '
+```
 
 ## Cleanup steps
 ```bash
 cd ~/.dotfiles
-stow -D .
+stow -Dv .
 ```
 deletes symlinks stow created
 
