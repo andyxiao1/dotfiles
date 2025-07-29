@@ -24,6 +24,10 @@ This repo mirrors exactly how things should look in my `$HOME` directory (`~/`)
 2.) run
 ```bash
 cd ~/.dotfiles
+# dryrun
+stow -nv .
+
+# run for real
 stow .
 ```
 which symlinks the files in this repo to the parent directory (`~/`), ignoring
