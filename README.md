@@ -11,6 +11,8 @@ source: https://www.youtube.com/watch?v=y6XCebnB9gs
 - I try to be very intentional & explicit with my settings. I always forget
   where/why I did something so I leave verbose comments & sources via `source: `
   lines
+- I try to use the "XDG Base Directory Specification" stuff whenever I can
+  because it feels cleaner. This just means put dotfiles in `~/.config`
 
 # Usage
 I use GNU stow to manage dotfiles. It is a "symlink farm manager"
