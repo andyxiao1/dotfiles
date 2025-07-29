@@ -1,7 +1,0 @@
-[core]
-	pager = less -FRSX
-[pager]
-	log = less
-[user]
-	name = Andy Xiao
-	email = andyxiao@seas.upenn.edu
