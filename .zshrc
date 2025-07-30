@@ -22,7 +22,7 @@
 # TODO: field script/function thing
 
 # REMEMBER: bc = basic calculator to do simple math
-# REMEMBER: we are trying to get better with emacs shell bindings; bindkey -L is useful to figure out the mappings
+# REMEMBER: we are trying to get better with emacs shell bindings; `bindkey -L | less` is useful to figure out the mappings
 
 # ================================================================================
 # ================================== Settings ====================================
