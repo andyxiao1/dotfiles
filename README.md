@@ -15,8 +15,11 @@ SOURCE: https://www.youtube.com/watch?v=y6XCebnB9gs
 - I try to use the "XDG Base Directory Specification" stuff whenever I can
   because it feels cleaner. This just means put dotfiles in `~/.config`
 - Once I have a decent config, I should try to timebox an explicit 20-30
-  minutes per week to iterating on my devX, explore new tools, address todos,
-  etc
+  minutes per week max to iterating on my devX, explore new tools, address
+  todos, etc. Then every 4-6 months I should spend some time to do a deeper
+  dive
+- I sometimes get way too focused on perfection; I need to be okay with "good
+  enough" even if it is slightly sub-optimal
 - Generally, I try to deviate as little as possible from defaults, especially
   for things like keybindings
 
@@ -58,8 +61,11 @@ stow -Dv .
 deletes symlinks stow created
 
 # Notes
-- my current setup is zsh/iterm2/vscode/tmux -> zsh/iterm2/neovim/tmux
-- gonna try out switching from vscode to neovim; let's see how it goes
+- my current setup is zsh/iterm2/vscode/tmux but I am trying out
+  zsh/iterm2/neovim/tmux, starting from kickstart.nvim
+- kickstart.nvim: I cloned the main repo and removed the git repo to check into
+  this dotfiles repo. nvim plugins live in .local/share so we don't need to
+  worry about accidentally checking in the plugins
 
 # Manual Import/Export
 Some settings like iterm2 & rectangle require manual importing/exporting, so
