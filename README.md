@@ -56,6 +56,17 @@ deletes symlinks stow created
 - my current setup is zsh/iterm2/vscode/tmux -> zsh/iterm2/neovim/tmux
 - gonna try out switching from vscode to neovim; let's see how it goes
 
+# Iterm2
+iterm2 settings live in iterm2. They aren't synced with the stow dotfiles
+because they require manual importing/exporting.
+
+To export
+```
+General -> Settings -> Export All Settings and Data...
+or
+Search for "Load settings from a custom folder or URL"
+```
+
 # TODOs
 - [ ] figure out how to backup iterm
 - [ ] flesh out nvim setup
