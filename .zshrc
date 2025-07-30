@@ -137,6 +137,7 @@ alias dotfiles="cd $DOTFILES"
 alias dotreadme="$EDITOR $DOTFILES/README.md"
 
 # Tooling aliases
+# REMEMBER: NVIM_APPNAME="nvim-custom" nvim # to start with my non-kickstart nvim setup
 alias vim="nvim"
 # Truncate output to 250 chars
 alias trunc="cut -c -250"
