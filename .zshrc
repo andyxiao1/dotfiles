@@ -21,6 +21,8 @@
 # TODO: get a good diff/dwdiff workflow
 # TODO: download csvlook/csvcut (csvkit) & csvgui
 # TODO: field script/function thing
+# TODO: maybe: case sensitive shell auto-completes?
+
 
 # REMEMBER: bc = basic calculator to do simple math
 # REMEMBER: we are trying to get better with emacs shell bindings; `bindkey -L | less` is useful to figure out the mappings

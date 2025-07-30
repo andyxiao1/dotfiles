@@ -73,11 +73,10 @@ Search for "Load settings from a custom folder or URL"
 ```
 
 # TODOs
-- [ ] flesh out nvim setup
-- [ ] learn emacs keybindings in the shell
-- [ ] explore bat & other alternatives [here](https://www.reddit.com/r/linux/comments/9b2ort/comment/e4zy7lu/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
-- [ ] maybe: try emacs later on
-- [ ] maybe: try out different terminal emulators (kitty?)
-- [ ] maybe: try out different package managers (nix?)
-- [ ] maybe: export vscode setup just for posterity
-- [ ] maybe: case sensitive shell auto-completes?
+- TODO: flesh out nvim setup
+- TODO: get better at emacs keybindings in the shell
+- TODO: explore bat & other alternatives [here](https://www.reddit.com/r/linux/comments/9b2ort/comment/e4zy7lu/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+- TODO: maybe: try emacs later on
+- TODO: maybe: try out different terminal emulators (kitty? alacritty?)
+- TODO: maybe: try out different package managers (nix?)
+- TODO: maybe: export vscode setup just for posterity
