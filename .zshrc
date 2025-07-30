@@ -4,6 +4,7 @@
 # INSTALL: [zsh] https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 #          - this is usually installed by default
 # INSTALL: [oh-my-zsh] https://github.com/ohmyzsh/ohmyzsh
+# INSTALL: [p10k] https://github.com/romkatv/powerlevel10k
 # INSTALL: [fzf] https://github.com/junegunn/fzf
 # INSTALL: [lf] https://github.com/gokcehan/lf
 # INSTALL: [rg] https://github.com/BurntSushi/ripgrep
