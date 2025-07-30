@@ -78,10 +78,15 @@ source $ZSH/oh-my-zsh.sh
 # - REMEMBER: [fzf] ctrl+r to search cmd history
 # - REMEMBER: [fzf] ctrl+t to search files
 # - REMEMBER: [fzf] esc+c to open up directory switcher
-# - REMEMBER: [fzf] ctrl prefix for vim motions!
+# - REMEMBER: [fzf] ctrl prefix for vim motions! or emacs bindings!
 # - REMEMBER: [fzf] ** trigger for fuzzy completion; kill ** or ls **
-# - REMEMBER: [fzf] you can pipe fzf in things & it can be an intermediary step like `rg --hidden 'REMEMBER: ' | fzf | awk '{print $0}'` or `vim `fzf``
+# - REMEMBER: [fzf] you can pipe fzf in things & it can be an intermediary step like:
+# - REMEMBER: [fzf]   vim `fzf` # opens result of fzf in vim
+# - REMEMBER: [fzf]   rg --hidden 'REMEMBER: ' | fzf | awk -F: '{print $1}' # searches file with fzf & prints out the file name; n.b. -F is the field seperator
+# - REMEMBER: [fzf]   rg --hidden 'REMEMBER: ' | fzf | awk -F: '{print $1}' | xargs -n 1 nvim # same as above but opens with vim; n.b. xargs is useful when commands can't don't take stdin
+# - REMEMBER: [fzf]   vim `rg --hidden 'REMEMBER: ' | fzf | awk -F: '{print $1}'` # same as above done differently
 # - REMEMBER: [fzf] in file searcher, tab / shift + tab to multiselect files
+# - REMEMBER: [fzf] fzf-tmux side-script exists that opens fzf within a tmux pane
 
 # Sets up fzf keybindings, shell functions, auto-completion, etc
 [[ -f "$XDG_CONFIG_HOME/zsh/fzf.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/fzf.zsh"
@@ -99,6 +104,7 @@ export FZF_DEFAULT_OPTS="--height=90% --preview=\"cat {}\" --preview-window=righ
 # - --hidden: include hidden files and directories (those starting with a dot)
 # - --follow: follow symbolic links to files/directories
 # - --glob "!.git/*": exclude all files inside any .git directory
+# n.b. rg by default respects .gitignore'd files, even in --hidden mode!
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 

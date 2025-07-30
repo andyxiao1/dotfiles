@@ -81,3 +81,10 @@ Search for "Load settings from a custom folder or URL"
 - TODO: maybe: try out different terminal emulators (kitty? alacritty?)
 - TODO: maybe: try out different package managers (nix?)
 - TODO: maybe: export vscode setup just for posterity
+
+- TODO: [nit] ctrl+b requires double input; this is because ctrl + b is the default tmux prefix; not sure what to do here will just live with it for now
+- TODO: [nit] ctrl+n/ctrl+p has slightly different behavior from up/down arrow in search wrt partial commands. is there a way to resolve this?
+
+- TODO: [nit] split up zshrc into smaller files (1 for fzf/aliases etc); also for custom company configs
+- TODO: [nit] annotate computer/setup specific settings like git email
+- TODO: [nit] figure out how the stow workflow will work for things tmux plugins wrt ln? will secondary git repos be installed there?
