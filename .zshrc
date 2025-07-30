@@ -90,7 +90,8 @@ source $ZSH/oh-my-zsh.sh
 # - preview=cat {}                  show file contents in preview
 # - preview-window=right:40%:wrap   place preview on right, 40% width, wrap lines
 # - style=full                      enable full UI style (I prefer this)
-export FZF_DEFAULT_OPTS="--height=90% --preview=\"cat {}\" --preview-window=right:40%:wrap --style=full"
+# - layout=reverse                  show prompt & results top down
+export FZF_DEFAULT_OPTS="--height=90% --preview=\"cat {}\" --preview-window=right:40%:wrap --style=full --layout=reverse"
 # The command to use when running fzf:
 # - rg: ripgrep, faster
 # - --files: list all files to be searched (file names only, no content)
