@@ -22,6 +22,7 @@
 # TODO: field script/function thing
 
 # REMEMBER: bc = basic calculator to do simple math
+# REMEMBER: we are trying to get better with emacs shell bindings; bindkey -L is useful to figure out the mappings
 
 # ================================================================================
 # ================================== Settings ====================================
@@ -63,13 +64,12 @@ source $ZSH/oh-my-zsh.sh
 
 # =============================== fzf Stuff ================================
 # - REMEMBER: [fzf] ctrl+r to search cmd history
-# - REMEMBER: [fzf] ctrl+f to search files
+# - REMEMBER: [fzf] ctrl+t to search files
 # - REMEMBER: [fzf] esc+c to open up directory switcher
 # - REMEMBER: [fzf] ctrl prefix for vim motions!
 # - REMEMBER: [fzf] ** trigger for fuzzy completion; kill ** or ls **
 # - REMEMBER: [fzf] you can pipe fzf in things & it can be an intermediary step like `rg --hidden 'REMEMBER: ' | fzf | awk '{print $0}'` or `vim `fzf``
 # - REMEMBER: [fzf] in file searcher, tab / shift + tab to multiselect files
-# - TODO: [fzf] ** trigger sometimes doesn't work
 
 # Sets up fzf keybindings, shell functions, auto-completion, etc
 [[ -f "$XDG_CONFIG_HOME/zsh/fzf.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/fzf.zsh"
@@ -84,10 +84,6 @@ export FZF_DEFAULT_OPTS="--height=70% --preview=\"cat {}\" --preview-window=righ
 # - --glob "!.git/*": exclude all files inside any .git directory
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# For historical reasons I'm used to ctrl + f as the fzf file finder
-# TODO: [fzf] this ctrl + f thing isn't working; I think because of my bindkey -v later on
-bindkey '^F' fzf-file-widget
 
 # ============================== Post-Source Things ==============================
 # n.b. uv adds this
@@ -106,14 +102,20 @@ bindkey '^F' fzf-file-widget
 
 # Dev config aliases
 alias zshconfig="nvim ~/.zshrc"
+alias gitconfig="nvim ~/.config/git/config"
 alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
 alias dotfiles="cd ~/.dotfiles"
 
 # Tooling aliases
 alias vim="nvim"
+# Truncate output to 250 chars
 alias trunc="cut -c -250"
-alias ssum="awk '{total+=\$}END{printf\"%f\n\",total}'"
+# Sum the first column of input numbers
+alias ssum="awk '{total+=\$1} END {printf \"%f\n\", total}'"
+# Split space-separated words into separate lines
 alias splitlines="tr ' ' '\n'"
+# Load new history lines (from other terminals)
+alias hist='history -n'
 
 # ================================================================================
 # ================================== Functions ===================================
