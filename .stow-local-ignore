@@ -29,7 +29,12 @@ _darcs
 # ================================================================================
 # =============================== Custom Ignores =================================
 # ================================================================================
-# iterm2 settings export which need to manually be loaded
+# settings which need to manually imported/exported
 \.iterm2
+\.rectangle
+
 # backup files
 .*\.bak
+
+# ignore files
+.DS_Store

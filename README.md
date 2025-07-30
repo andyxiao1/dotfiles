@@ -14,6 +14,11 @@ SOURCE: https://www.youtube.com/watch?v=y6XCebnB9gs
 - I have more markers listed below
 - I try to use the "XDG Base Directory Specification" stuff whenever I can
   because it feels cleaner. This just means put dotfiles in `~/.config`
+- Once I have a decent config, I should try to timebox an explicit 20-30
+  minutes per week to iterating on my devX, explore new tools, address todos,
+  etc
+- Generally, I try to deviate as little as possible from defaults, especially
+  for things like keybindings
 
 # Usage
 I use GNU stow to manage dotfiles. It is a "symlink farm manager"
@@ -56,9 +61,9 @@ deletes symlinks stow created
 - my current setup is zsh/iterm2/vscode/tmux -> zsh/iterm2/neovim/tmux
 - gonna try out switching from vscode to neovim; let's see how it goes
 
-# Iterm2
-iterm2 settings live in iterm2. They aren't synced with the stow dotfiles
-because they require manual importing/exporting.
+# Manual Import/Export
+Some settings like iterm2 & rectangle require manual importing/exporting, so
+they aren't synced with stow
 
 To export
 ```
