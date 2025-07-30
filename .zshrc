@@ -97,8 +97,8 @@ bindkey '^F' fzf-file-widget
 # Vi keybindings in zsh shell
 # n.b. this has to be after all the source-ing that happens above, because
 # something there overrides bindkey
-# TODO: [bindkey -v] decide if I actually want this, some weird stuff happens fzf
-bindkey -v
+# TODO: [bindkey -v] decide if I actually want this on, some weird stuff happens fzf ctrl+F & ** tab completion
+# bindkey -v
 
 # ================================================================================
 # =================================== Aliases ====================================
