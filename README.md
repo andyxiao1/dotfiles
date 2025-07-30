@@ -58,4 +58,8 @@ deletes symlinks stow created
 
 # TODOs
 - [ ] figure out how to backup iterm
-- [ ] actually update dotfiles
+- [ ] flesh out nvim setup
+- [ ] learn emacs keybindings in the shell
+- [ ] maybe: try emacs later on
+- [ ] maybe: try out different terminal emulators (kitty?)
+- [ ] maybe: try out different package managers (nix?)
