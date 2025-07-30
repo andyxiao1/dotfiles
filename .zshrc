@@ -13,6 +13,7 @@
 # INSTALL: [nvim] https://github.com/neovim/neovim
 # INSTALL: [tree] https://formulae.brew.sh/formula/tree
 # INSTALL: [htop] https://formulae.brew.sh/formula/htop
+# INSTALL: [fd] https://github.com/sharkdp/fd
 
 # ================================================================================
 # ================================ TODOs / Notes =================================
