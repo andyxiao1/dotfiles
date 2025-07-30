@@ -7,16 +7,18 @@
 # INSTALL: [fzf] https://github.com/junegunn/fzf
 # INSTALL: [lf] https://github.com/gokcehan/lf
 # INSTALL: [rg] https://github.com/BurntSushi/ripgrep
+# INSTALL: [nvim] https://github.com/neovim/neovim
+# INSTALL: [tree] https://formulae.brew.sh/formula/tree
+# INSTALL: [htop] https://formulae.brew.sh/formula/htop
 
 # ================================================================================
 # ================================ TODOs / Notes =================================
 # ================================================================================
-# TODO: install htop
 # TODO: get better shell auto-completions / faster
 # TODO: get intellisense like auto-suggestions in the shell; with tabbing
 # TODO: figure out how to specific things ignored/deleted from zsh history
 # TODO: get a good diff/dwdiff workflow
-# TODO: download csvlook
+# TODO: download csvlook/csvcut (csvkit) & csvgui
 # TODO: field script/function thing
 
 # REMEMBER: bc = basic calculator to do simple math
@@ -66,9 +68,8 @@ source $ZSH/oh-my-zsh.sh
 # - REMEMBER: [fzf] ctrl prefix for vim motions!
 # - REMEMBER: [fzf] ** trigger for fuzzy completion; kill ** or ls **
 # - REMEMBER: [fzf] you can pipe fzf in things & it can be an intermediary step like `rg --hidden 'REMEMBER: ' | fzf | awk '{print $0}'` or `vim `fzf``
+# - REMEMBER: [fzf] in file searcher, tab / shift + tab to multiselect files
 # - TODO: [fzf] ** trigger sometimes doesn't work
-# - TODO: [fzf] better ignore files (hidden? .git?)
-# - LEARN: [fzf] multi-select mode
 
 # Sets up fzf keybindings, shell functions, auto-completion, etc
 [[ -f "$XDG_CONFIG_HOME/zsh/fzf.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/fzf.zsh"
