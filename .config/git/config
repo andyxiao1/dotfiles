@@ -1,0 +1,16 @@
+[core]
+	# Use less as pager with the following flags:
+	# -F : quit if output fits on one screen
+	# -R : show raw control characters (enables color)
+	# -S : disable line wrapping (horizontal scroll instead)
+	# We omit -X so the screen is cleared after quitting less,
+	# keeping the terminal clean instead of preserving output.
+	pager = less -FRS
+[user]
+	name = Andy Xiao
+	email = axiao222@gmail.com
+[rebase]
+	# Auto stash before rebase
+	autoStash = true
+	# Auto-squash fixup commits on rebase
+	autosquash = true
