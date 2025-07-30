@@ -39,8 +39,9 @@
 export VISUAL=nvim
 # Fallback / general editor
 export EDITOR="$VISUAL"
-# Set XDG_CONFIG_HOME so it can be used downstream
+# Set some XDG base dirs to be used downstream & generally
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 
 # =============================== oh-my-zsh Stuff ================================
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -124,15 +125,18 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # ================================================================================
 
 export DOTFILES="~/.dotfiles"
+export ZSHCONFIG="~/.zshrc"
+export GITCONFIG="$XDG_CONFIG_HOME/git/config"
+export TMUXCONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
 
 # ================================================================================
 # =================================== Aliases ====================================
 # ================================================================================
 
 # Dev config aliases
-alias zshconfig="$EDITOR ~/.zshrc"
-alias gitconfig="$EDITOR ~/.config/git/config"
-alias tmuxconfig="$EDITOR ~/.config/tmux/tmux.conf"
+alias zshconfig="$EDITOR $ZSHCONFIG"
+alias gitconfig="$EDITOR $GITCONFIG"
+alias tmuxconfig="$EDITOR $TMUXCONFIG"
 alias dotfiles="cd $DOTFILES"
 alias dotreadme="$EDITOR $DOTFILES/README.md"
 
