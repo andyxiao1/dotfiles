@@ -6,6 +6,8 @@
 # INSTALL: [oh-my-zsh] https://github.com/ohmyzsh/ohmyzsh
 # INSTALL: [p10k] https://github.com/romkatv/powerlevel10k
 # INSTALL: [fzf] https://github.com/junegunn/fzf
+# INSTALL: [zsh-autosuggestions] https://github.com/zsh-users/zsh-autosuggestions/
+# INSTALL: [zsh][fast-syntax-highlighting] https://github.com/zdharma-continuum/fast-syntax-highlighting
 # INSTALL: [lf] https://github.com/gokcehan/lf
 # INSTALL: [rg] https://github.com/BurntSushi/ripgrep
 # INSTALL: [nvim] https://github.com/neovim/neovim
@@ -53,8 +55,14 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
+    # Built-in to oh-my-zsh
     git
+    # Zsh shell auto-suggestions based on history & completions
     zsh-autosuggestions
+    # Zsh shell syntax highlighting; I prefer this over zsh-syntax-highlighting
+    # because I don't need to source it at the end of my zshrc to not mess up
+    # my autosuggestion colors & it is supposedly faster / more correct
+    fast-syntax-highlighting
 )
 
 # Loads the main oh-my-zsh script which sets up themes, enables plugins, etc
