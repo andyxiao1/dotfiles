@@ -80,3 +80,4 @@ Search for "Load settings from a custom folder or URL"
 - [ ] maybe: try out different terminal emulators (kitty?)
 - [ ] maybe: try out different package managers (nix?)
 - [ ] maybe: export vscode setup just for posterity
+- [ ] maybe: case sensitive shell auto-completes?
