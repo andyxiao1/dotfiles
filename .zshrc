@@ -146,6 +146,8 @@ alias ssum="awk '{total+=\$1} END {printf \"%f\n\", total}'"
 alias splitlines="tr ' ' '\n'"
 # Load new history lines (from other terminals)
 alias hist='history -n'
+# Create or attach to my main development tmux session
+alias tdev="tmux new-session -A -s dev"
 
 # ================================================================================
 # ================================== Functions ===================================
