@@ -97,14 +97,21 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # bindkey -v
 
 # ================================================================================
+# =============================== Custom Env Vars ================================
+# ================================================================================
+
+export DOTFILES="~/.dotfiles"
+
+# ================================================================================
 # =================================== Aliases ====================================
 # ================================================================================
 
 # Dev config aliases
-alias zshconfig="nvim ~/.zshrc"
-alias gitconfig="nvim ~/.config/git/config"
-alias tmuxconfig="nvim ~/.config/tmux/tmux.conf"
-alias dotfiles="cd ~/.dotfiles"
+alias zshconfig="$EDITOR ~/.zshrc"
+alias gitconfig="$EDITOR ~/.config/git/config"
+alias tmuxconfig="$EDITOR ~/.config/tmux/tmux.conf"
+alias dotfiles="cd $DOTFILES"
+alias dotreadme="$EDITOR $DOTFILES/README.md"
 
 # Tooling aliases
 alias vim="nvim"
