@@ -66,6 +66,11 @@ deletes symlinks stow created
 - kickstart.nvim: I cloned the main repo and removed the git repo to check into
   this dotfiles repo. nvim plugins live in .local/share so we don't need to
   worry about accidentally checking in the plugins
+- tmux: tmux plugins live in ~/.local/share/tmux/plugins after setting
+  $TMUX_PLUGIN_MANAGER_PATH. this means they also won't get checked in now, we
+  just need to take special care when initially installing tpm by git cloning
+  into that folder
+
 
 # Manual Import/Export
 Some settings like iterm2 & rectangle require manual importing/exporting, so
@@ -93,4 +98,3 @@ Search for "Load settings from a custom folder or URL"
 
 - TODO: [nit] split up zshrc into smaller files (1 for fzf/aliases etc); also for custom company configs
 - TODO: [nit] annotate computer/setup specific settings like git email
-- TODO: [nit] figure out how the stow workflow will work for things tmux plugins wrt ln? will secondary git repos be installed there?
