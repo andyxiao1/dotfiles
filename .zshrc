@@ -74,8 +74,12 @@ source $ZSH/oh-my-zsh.sh
 # Sets up fzf keybindings, shell functions, auto-completion, etc
 [[ -f "$XDG_CONFIG_HOME/zsh/fzf.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/fzf.zsh"
 
-# I prefer --style=full better
-export FZF_DEFAULT_OPTS="--height=70% --preview=\"cat {}\" --preview-window=right:60%:wrap --style=full"
+# FZF config:
+# - height=90%                      use most of the terminal height
+# - preview=cat {}                  show file contents in preview
+# - preview-window=right:40%:wrap   place preview on right, 40% width, wrap lines
+# - style=full                      enable full UI style (I prefer this)
+export FZF_DEFAULT_OPTS="--height=90% --preview=\"cat {}\" --preview-window=right:40%:wrap --style=full"
 # The command to use when running fzf:
 # - rg: ripgrep, faster
 # - --files: list all files to be searched (file names only, no content)
