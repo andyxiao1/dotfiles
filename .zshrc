@@ -20,7 +20,7 @@
 # ================================================================================
 # TODO: get better shell auto-completions / faster
 # TODO: get intellisense like auto-suggestions in the shell; with tabbing
-# TODO: figure out how to specific things ignored/deleted from zsh history
+# TODO: figure out how to specific things ignored/deleted from zsh history; space prefix?
 # TODO: get a good diff/dwdiff workflow
 # TODO: download csvlook/csvcut (csvkit) & csvgui
 # TODO: field script/function thing
@@ -28,7 +28,7 @@
 
 
 # REMEMBER: bc = basic calculator to do simple math
-# REMEMBER: we are trying to get better with emacs shell bindings; `bindkey -L | less` is useful to figure out the mappings
+# REMEMBER: we are trying to get better with emacs shell bindings; `bindkey -L | less` or now `cheatsheet` is useful to figure out the mappings
 
 # ================================================================================
 # ================================== Settings ====================================
@@ -150,9 +150,12 @@ alias ssum="awk '{total+=\$1} END {printf \"%f\n\", total}'"
 # Split space-separated words into separate lines
 alias splitlines="tr ' ' '\n'"
 # Load new history lines (from other terminals)
+# TODO: figure out why i even need hist; shouldn't this be done automatically in zsh?
 alias hist='history -n'
 # Create or attach to my main development tmux session
 alias tdev="tmux new-session -A -s dev"
+# Temporary alias to help me remember emacs movement keybindings in zsh/terminal
+alias cheatsheet='bindkey | rg "beginning-of-line|end-of-line|forward-char|backward-char|forward-word|backward-word|delete-char-or-list|backward-delete-char|kill-word|backward-kill-word|kill-line|kill-whole-line|yank\b|yank-pop|undo" | awk "{ if (!seen[\$2]++) print }"'
 
 # ================================================================================
 # ================================== Functions ===================================

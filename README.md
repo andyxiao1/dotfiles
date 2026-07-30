@@ -11,7 +11,8 @@ SOURCE: https://www.youtube.com/watch?v=y6XCebnB9gs
 - I try to be very intentional & explicit with my settings. I always forget
   where/why I did something so I leave verbose comments & sources via this
   `SOURCE: ` marker
-- I have more markers listed below
+- I have more markers listed below. The idea is I can put them anywhere in the
+  config files and still surface them easily
 - I try to use the "XDG Base Directory Specification" stuff whenever I can
   because it feels cleaner. This just means put dotfiles in `~/.config`
 - Once I have a decent config, I should try to timebox an explicit 20-30
