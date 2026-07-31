@@ -1,5 +1,12 @@
 I store all my dotfiles here.
 
+The main configs are for zshrc, iterm, tmux, & vscode. (vscode is done via
+settings sync)
+
+Secondary things are like rectangle, git, nvim, etc
+
+Other computer setup is documented on notion [here](https://dashing-ravioli-45d.notion.site/Computer-Setup-1a5501b59b634fb7b905e66019930869).
+
 # Install / Sources
 INSTALL: [stow] https://formulae.brew.sh/formula/stow  
 SOURCE: https://tamerlan.dev/how-i-manage-my-dotfiles-using-gnu-stow/  
