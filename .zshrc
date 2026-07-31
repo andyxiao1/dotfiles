@@ -75,6 +75,16 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f "$XDG_CONFIG_HOME/zsh/p10k.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/p10k.zsh"
 
+# zsh-autosuggestions' history strategy reads the in-memory $history array, not
+# $HISTFILE directly. SHARE_HISTORY (set by oh-my-zsh) only re-imports new lines
+# from $HISTFILE into $history at certain trigger points, so commands run in
+# other panes/windows can be missing from suggestions even though they're
+# already in $HISTFILE. Re-import (incrementally, via -I) before every prompt so
+# suggestions always reflect other sessions' history.
+autoload -Uz add-zsh-hook
+_sync_history() { fc -RI }
+add-zsh-hook precmd _sync_history
+
 # =============================== fzf Stuff ================================
 # - REMEMBER: [fzf] ctrl+r to search cmd history
 # - REMEMBER: [fzf] ctrl+t to search files
@@ -149,9 +159,6 @@ alias trunc="cut -c -250"
 alias ssum="awk '{total+=\$1} END {printf \"%f\n\", total}'"
 # Split space-separated words into separate lines
 alias splitlines="tr ' ' '\n'"
-# Load new history lines (from other terminals)
-# TODO: figure out why i even need hist; shouldn't this be done automatically in zsh?
-alias hist='history -n'
 # Create or attach to my main development tmux session
 alias tdev="tmux new-session -A -s dev"
 # Temporary alias to help me remember emacs movement keybindings in zsh/terminal
