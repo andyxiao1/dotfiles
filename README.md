@@ -101,6 +101,10 @@ Search for "Load settings from a custom folder or URL"
 - TODO: maybe: try out different package managers (nix?)
 - TODO: maybe: export vscode setup just for posterity
 
+- TODO: [low-prio] better history (histfile, savehist, histsize...) settings?
+- TODO: [low-prio] space before command should be ignored from hist
+- TODO: [low-prio][maybe] better tab completion default settings?
+
 - TODO: [nit] ctrl+b requires double input; this is because ctrl + b is the default tmux prefix; not sure what to do here will just live with it for now
 - TODO: [nit] ctrl+n/ctrl+p has slightly different behavior from up/down arrow in search wrt partial commands. is there a way to resolve this?
 
