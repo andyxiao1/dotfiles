@@ -76,13 +76,16 @@ source $ZSH/oh-my-zsh.sh
 [[ -f "$XDG_CONFIG_HOME/zsh/p10k.zsh" ]] && source "$XDG_CONFIG_HOME/zsh/p10k.zsh"
 
 # zsh-autosuggestions' history strategy reads the in-memory $history array, not
-# $HISTFILE directly. SHARE_HISTORY (set by oh-my-zsh) only re-imports new lines
-# from $HISTFILE into $history at certain trigger points, so commands run in
-# other panes/windows can be missing from suggestions even though they're
-# already in $HISTFILE. Re-import (incrementally, via -I) before every prompt so
-# suggestions always reflect other sessions' history.
+# $HISTFILE directly. SHARE_HISTORY (set by oh-my-zsh) only lazily imports new
+# lines from $HISTFILE into $history when a widget "accesses" history (e.g. a
+# fresh up-arrow press), so a just-typed command from another pane/window can
+# be invisible to suggestions/search until something happens to trigger that.
+# `history -n` (i.e. `fc -l -n`) forces that same lazy-import path on every
+# prompt. n.b. don't use `fc -R`/`fc -RI` here instead -- that's a different
+# code path that resets zsh's internal history-line pointer and breaks
+# up-arrow/ctrl-p navigation entirely (confirmed via tmux send-keys testing).
 autoload -Uz add-zsh-hook
-_sync_history() { fc -RI }
+_sync_history() { history -n >/dev/null }
 add-zsh-hook precmd _sync_history
 
 # =============================== fzf Stuff ================================
