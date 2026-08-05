@@ -1,16 +1,10 @@
 I store all my dotfiles here.
 
-The main configs are for zshrc, iterm, tmux, & vscode. (vscode is done via
-settings sync)
+The main configs are for zshrc, iterm, tmux, & vscode.
 
 Secondary things are like rectangle, git, nvim, etc
 
 Other computer setup is documented on notion [here](https://dashing-ravioli-45d.notion.site/Computer-Setup-1a5501b59b634fb7b905e66019930869).
-
-# Install / Sources
-INSTALL: [stow] https://formulae.brew.sh/formula/stow  
-SOURCE: https://tamerlan.dev/how-i-manage-my-dotfiles-using-gnu-stow/  
-SOURCE: https://www.youtube.com/watch?v=y6XCebnB9gs
 
 # Philosopy
 - I try to catalog everything I need to install via whatever appropriate
@@ -34,6 +28,10 @@ SOURCE: https://www.youtube.com/watch?v=y6XCebnB9gs
 # Usage
 I use GNU stow to manage dotfiles. It is a "symlink farm manager"
 
+INSTALL: [stow] https://formulae.brew.sh/formula/stow  
+SOURCE: https://tamerlan.dev/how-i-manage-my-dotfiles-using-gnu-stow/  
+SOURCE: https://www.youtube.com/watch?v=y6XCebnB9gs
+
 This repo mirrors exactly how things should look in my `$HOME` directory (`~/`)
 
 ## Dotfile set up steps
@@ -50,6 +48,8 @@ stow -v .
 which symlinks the files in this repo to the parent directory (`~/`), ignoring
 things in `.stow-local-ignore`
 
+stow will error if a real file already exists at the target path -- it refuses to overwrite a real file with a symlink. move/delete it first, then stow
+
 ## Find markers
 ```bash
 cd ~/.dotfiles
@@ -57,7 +57,7 @@ rg -i --hidden 'INSTALL: '
 rg -i --hidden 'TODO: '
 rg -i --hidden 'SOURCE: '
 rg -i --hidden 'LEARN: '
-# helpful tipes to remember
+# helpful tips to remember
 rg -i --hidden 'REMEMBER: '
 ```
 
@@ -69,8 +69,8 @@ stow -Dv .
 deletes symlinks stow created
 
 # Notes
-- my current setup is zsh/iterm2/vscode/tmux but I am trying out
-  zsh/iterm2/neovim/tmux, starting from kickstart.nvim
+- my current setup is zsh/iterm2/vscode/tmux. I tried neovim for a bit but
+  abandoned it for now
 - kickstart.nvim: I cloned the main repo and removed the git repo to check into
   this dotfiles repo. nvim plugins live in .local/share so we don't need to
   worry about accidentally checking in the plugins
@@ -91,6 +91,37 @@ or
 Search for "Load settings from a custom folder or URL"
 ```
 
+# VS Code
+INSTALL: [vscode] https://formulae.brew.sh/cask/visual-studio-code
+
+relevant files are symlinked into `~/Library/Application Support/Code/User/`
+via stow, same as everything else. Settings Sync is still on for everything
+-- but only the files tracked here are also in git. anything else Settings
+Sync manages (extensions themselves, UI state, etc.) only lives in Settings
+Sync, not this repo.
+
+- this path is macOS-specific. if I pick the remote-ssh-to-a-devbox workflow
+  back up, I'd need something else here (manual symlinking, or a separate
+  OS-conditional stow package)
+- new machine gotcha: clone/stow this repo before installing vscode, to
+  avoid issues with a real file. if a real file gets created first
+  anyway, stow will conflict on it -- move the real file aside, then stow
+
+## Extensions
+extensions.txt is a plain list of installed extension IDs (no versions --
+always installs whatever's current). Not auto-synced, has to be
+regenerated/installed by hand.
+
+Regenerate the list:
+```bash
+code --list-extensions > ~/.dotfiles/"Library/Application Support/Code/User/extensions.txt"
+```
+
+Install from the list (e.g. on a new machine, after stowing):
+```bash
+xargs -L1 code --install-extension < ~/.dotfiles/"Library/Application Support/Code/User/extensions.txt"
+```
+
 # TODOs
 - TODO: flesh out nvim setup
 - TODO: get better at emacs keybindings in the shell
@@ -99,7 +130,6 @@ Search for "Load settings from a custom folder or URL"
 - TODO: maybe: try emacs later on
 - TODO: maybe: try out different terminal emulators (kitty? alacritty?)
 - TODO: maybe: try out different package managers (nix?)
-- TODO: maybe: export vscode setup just for posterity
 
 - TODO: [low-prio] better history (histfile, savehist, histsize...) settings?
 - TODO: [low-prio] space before command should be ignored from hist

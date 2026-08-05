@@ -1,0 +1,204 @@
+{
+    // ================================================================================
+    // Editor Settings
+    // ================================================================================
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        80
+    ],
+    "editor.insertSpaces": true, // Tabs as spaces.
+    // "editor.detectIndentation": true,
+    "editor.linkedEditing": true,
+    "editor.lineNumbers": "relative", // Toggled with cmd+L via Settings Cycler.
+    "editor.trimAutoWhitespace": false, // doesn't remove whitespace when hitting `esc` with vim.
+    "editor.bracketPairColorization.enabled": true, // RIP Bracket Pair Colorizer
+    "editor.guides.bracketPairs": "active", // RIP Bracket Pair Colorizer
+    "workbench.sideBar.location": "right",
+    "breadcrumbs.enabled": true,
+    "explorer.sortOrder": "type", // TESTING
+    "git.mergeEditor": false, // TESTING
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.tabCompletion": "on",
+    "window.confirmBeforeClose": "keyboardOnly",
+    "security.workspace.trust.enabled": false,
+    // ================================================================================
+    // Theme / UI Settings
+    // ================================================================================
+    "workbench.colorTheme": "Dracula.min",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "[Dracula.min]": {
+            "editor.foldBackground": "#fff0",
+            "activityBar.background": "#282a36",
+            "editor.lineHighlightBackground": "#343746",
+        }
+    },
+    // ================================================================================
+    // Terminal Settings
+    // ================================================================================
+    "terminal.integrated.fontFamily": "MesloLGS NF", // Necessary for p10k.
+    // ================================================================================
+    // JavaScript / TypeScript / React Settings
+    // ================================================================================
+    /*"[javascript]": {
+        // "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": true,
+        // "editor.formatOnSave": true,
+    },
+    "[javascriptreact]": {
+        // "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": true,
+        // "editor.formatOnSave": true,
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": true,
+        "editor.formatOnSave": true,
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": true,
+        "editor.formatOnSave": true,
+    },
+    "prettier.semi": false, // No semicolons
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
+    // "prettier.arrowParens": "avoid",
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true, // Formats all JS/TS with eslint, gets overriden if prettier is used.
+        // "source.organizeImports": true
+    },*/
+    // ================================================================================
+    // Python Settings
+    // ================================================================================
+    "[python]": {
+        "editor.formatOnSaveMode": "file",
+        "editor.formatOnPaste": false,
+        "editor.formatOnType": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        },
+        // "editor.defaultFormatter": "charliermarsh.ruff",
+    },
+    // "python.formatting.provider": "black",
+    /*"[python]": {
+        //     "editor.tabSize": 4,
+        // "editor.formatOnSave": true,
+        // "editor.formatOnType": true,
+        // "editor.formatOnSaveMode": "modificationsIfAvailable"
+        //     "files.trimTrailingWhitespace": true,
+        //     "editor.defaultFormatter": "ms-python.python"
+    },*/
+    // "python.pythonPath": "/usr/bin/python3",
+    // "python.linting.pylintEnabled": true,
+    // "python.linting.enabled": true,
+    // "python.analysis.typeCheckingMode": "basic",
+    // ================================================================================
+    // Other Language / Extension Specific Settings
+    // ================================================================================
+    // "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 80}", // CIS 3800
+    // "C_Cpp.clang_format_fallbackStyle": "{ BreakBeforeBraces: Allman, IndentWidth: 4, ColumnLimit: 80}", // CIS 5050
+    "[c]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "modificationsIfAvailable",
+        "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+        // "editor.trimAutoWhitespace": false
+    },
+    "[jsonc]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80
+    },
+    // ================================================================================
+    // Vim Settings
+    // ================================================================================
+    "editor.cursorSurroundingLines": 14, // Scrolloff
+    "vim.camelCaseMotion.enable": true,
+    "vim.leader": " ",
+    "vim.foldfix": true,
+    "vim.textwidth": 88, // TODO: 88 or 80. can it just be the closest ruler
+    // "vim.textwidth": 80,
+    // "vim.statusBarColorControl": false,
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    // ================================================================================
+    // Better Comments Settings
+    // ================================================================================
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "nocommit",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "changeme",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        }
+    ],
+    // For some reason, {} works but null doesn't.
+    "leaper.decorationOptions": {},
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "none",
+    "notebook.lineNumbers": "on",
+    "explorer.confirmDelete": false,
+    "vim.showMarksInGutter": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.splitInGroupLayout": "vertical",
+}
