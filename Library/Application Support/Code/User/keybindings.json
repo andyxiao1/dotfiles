@@ -273,10 +273,5 @@
   {
     "key": "shift+cmd+r",
     "command": "workbench.view.remote"
-  },
-  {
-    "key": "tab",
-    "command": "-tabout",
-    "when": "editorTextFocus && !editorHasMultipleSelections && !inSnippetMode && !inlineSuggestionVisible && !suggestWidgetVisible"
   }
 ]

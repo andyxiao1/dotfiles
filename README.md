@@ -128,6 +128,8 @@ xargs -L1 code --install-extension < ~/.dotfiles/"Library/Application Support/Co
 - TODO: https://scottspence.com/posts/speeding-up-my-zsh-shell
 - TODO: explore bat & other alternatives [here](https://www.reddit.com/r/linux/comments/9b2ort/comment/e4zy7lu/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 - TODO: maybe: try emacs later on
+- TODO: maybe: reconsider gitlens. only really using the inline blame, which
+  vscode now does natively via `git.blame.editorDecoration.enabled`
 - TODO: maybe: try out different terminal emulators (kitty? alacritty?)
 - TODO: maybe: try out different package managers (nix?)
 
