@@ -39,42 +39,6 @@
     // ================================================================================
     "terminal.integrated.fontFamily": "MesloLGS NF", // Necessary for p10k.
     // ================================================================================
-    // JavaScript / TypeScript / React Settings
-    // ================================================================================
-    /*"[javascript]": {
-        // "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2,
-        "files.trimTrailingWhitespace": true,
-        // "editor.formatOnSave": true,
-    },
-    "[javascriptreact]": {
-        // "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2,
-        "files.trimTrailingWhitespace": true,
-        // "editor.formatOnSave": true,
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.tabSize": 2,
-        "files.trimTrailingWhitespace": true,
-        "editor.formatOnSave": true,
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features",
-        "editor.tabSize": 2,
-        "files.trimTrailingWhitespace": true,
-        "editor.formatOnSave": true,
-    },
-    "prettier.semi": false, // No semicolons
-    "prettier.singleQuote": true,
-    "prettier.jsxSingleQuote": true,
-    // "prettier.arrowParens": "avoid",
-    "eslint.format.enable": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true, // Formats all JS/TS with eslint, gets overriden if prettier is used.
-        // "source.organizeImports": true
-    },*/
-    // ================================================================================
     // Python Settings
     // ================================================================================
     "[python]": {
@@ -185,7 +149,6 @@
     ],
     // For some reason, {} works but null doesn't.
     "leaper.decorationOptions": {},
-    "typescript.updateImportsOnFileMove.enabled": "always",
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.startupEditor": "none",
     "notebook.lineNumbers": "on",

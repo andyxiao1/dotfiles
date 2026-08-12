@@ -2,7 +2,6 @@ aaron-bond.better-comments
 ashrafhadden.dracula-dot-min
 charliermarsh.ruff
 eamodio.gitlens
-esbenp.prettier-vscode
 hoovercj.vscode-settings-cycler
 mechatroner.rainbow-csv
 ms-python.black-formatter
