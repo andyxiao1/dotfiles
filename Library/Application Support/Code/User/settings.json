@@ -102,14 +102,6 @@
     // ================================================================================
     // Other Language / Extension Specific Settings
     // ================================================================================
-    // "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 80}", // CIS 3800
-    // "C_Cpp.clang_format_fallbackStyle": "{ BreakBeforeBraces: Allman, IndentWidth: 4, ColumnLimit: 80}", // CIS 5050
-    "[c]": {
-        "editor.formatOnSave": true,
-        "editor.formatOnSaveMode": "modificationsIfAvailable",
-        "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-        // "editor.trimAutoWhitespace": false
-    },
     "[jsonc]": {
         "editor.tabSize": 4,
         "editor.defaultFormatter": "vscode.json-language-features",
