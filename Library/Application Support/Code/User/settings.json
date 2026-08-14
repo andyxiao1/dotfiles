@@ -6,20 +6,17 @@
     "editor.rulers": [
         80
     ],
-    "editor.insertSpaces": true, // Tabs as spaces.
-    // "editor.detectIndentation": true,
     "editor.linkedEditing": true,
     "editor.lineNumbers": "relative", // Toggled with cmd+L via Settings Cycler.
     "editor.trimAutoWhitespace": false, // doesn't remove whitespace when hitting `esc` with vim.
-    "editor.bracketPairColorization.enabled": true, // RIP Bracket Pair Colorizer
     "editor.guides.bracketPairs": "active", // RIP Bracket Pair Colorizer
-    "workbench.sideBar.location": "right",
-    "breadcrumbs.enabled": true,
-    "explorer.sortOrder": "type", // TESTING
-    "git.mergeEditor": false, // TESTING
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modificationsIfAvailable",
     "editor.tabCompletion": "on",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.splitInGroupLayout": "vertical",
+    "explorer.sortOrder": "type", // Toggled with cmd+E via Settings Cycler.
+    "explorer.confirmDelete": false,
     "window.confirmBeforeClose": "keyboardOnly",
     "security.workspace.trust.enabled": false,
     // ================================================================================
@@ -28,12 +25,15 @@
     "workbench.colorTheme": "Dracula.min",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
+        // ignore the "property is not allowed" warnings -- these do work
         "[Dracula.min]": {
             "editor.foldBackground": "#fff0",
             "activityBar.background": "#282a36",
             "editor.lineHighlightBackground": "#343746",
         }
     },
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
     // ================================================================================
     // Terminal Settings
     // ================================================================================
@@ -48,23 +48,22 @@
             "source.fixAll": "explicit",
             "source.organizeImports": "explicit"
         },
+        // 88 is ruff's default line length
+        "editor.rulers": [
+            88
+        ],
+        "vim.textwidth": 88,
     },
     "python.analysis.typeCheckingMode": "basic", // off by default. can bump to standard/strict
     // ================================================================================
     // Other Language / Extension Specific Settings
     // ================================================================================
-    "[jsonc]": {
-        "editor.tabSize": 4,
-        "editor.defaultFormatter": "vscode.json-language-features",
-    },
-    "[json]": {
-        "editor.tabSize": 4,
-        "editor.defaultFormatter": "vscode.json-language-features",
-    },
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 80
     },
+    // For some reason, {} works but null doesn't.
+    "leaper.decorationOptions": {},
     // ================================================================================
     // Vim Settings
     // ================================================================================
@@ -72,9 +71,7 @@
     "vim.camelCaseMotion.enable": true,
     "vim.leader": " ",
     "vim.foldfix": true,
-    "vim.textwidth": 88, // TODO: 88 or 80. can it just be the closest ruler
-    // "vim.textwidth": 80,
-    // "vim.statusBarColorControl": false,
+    "vim.showMarksInGutter": true,
     "vim.visualModeKeyBindings": [
         {
             "before": [
@@ -134,12 +131,4 @@
             "backgroundColor": "transparent"
         }
     ],
-    // For some reason, {} works but null doesn't.
-    "leaper.decorationOptions": {},
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.startupEditor": "none",
-    "explorer.confirmDelete": false,
-    "vim.showMarksInGutter": true,
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.splitInGroupLayout": "vertical",
 }
